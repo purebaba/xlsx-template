@@ -68,6 +68,27 @@ those objects have keys `name` and `age`, you may end up with something like:
 If a particular value is an array, then it will be repeated across columns as
 above.
 
+### Image
+
+支持插入图片，一个单元格对应一张图片，图片会自动缩放，支持合并单元格:
+
+```
+
+let template = new XlsxTemplate(data, options)
+
+| ${image: xxx} |
+   
+```
+
+options 是否包含图片, true or Object
+
+```
+
+options: {
+    padding : Number // 图片距离单元格边框距离(pixel)
+}
+
+```
 ## Generating reports
 
 To make this magic happen, you need some code like this:
